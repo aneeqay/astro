@@ -1,19 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import ConfettiButton from '../components/ConfettiButton.astro'
+import Title from '../components/Title'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Aneeqa Astro">
 	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
@@ -33,21 +26,21 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1 class="text-3xl font-bold underline">Hello <span class="text-gradient">World!</span></h1>
+		<h1 class="text-3xl font-bold color-off-white">Hello World!</h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
+			My Website<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="/"
+				title="My Astro Website"
+				body="ipsum hello"
 			/>
 			<Card
 				href="https://astro.build/integrations/"
 				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				body="lorem Esse veniam irure est anim magna duis aute magna duis veniam laborum irure excepteur."
 			/>
 			<Card
 				href="https://astro.build/themes/"
@@ -60,6 +53,9 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
+		<div class='flex flex-col items-center py-4'>
+		<ConfettiButton/>
+		</div>
 	</main>
 </Layout>
 
@@ -89,30 +85,25 @@ import Card from '../components/Card.astro';
 		text-align: center;
 		margin-bottom: 1em;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
+	
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: #EFEBE0;
 		padding: 1.5rem;
 		border-radius: 8px;
+		color: #FB6B90
 	}
 	.instructions code {
 		font-size: 0.8em;
 		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
+		background: #EFEBE0;
+		color: #FB6B90;
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
 	}
 	.instructions strong {
-		color: rgb(var(--accent-light));
+		color: #FB4570;
 	}
 	.link-card-grid {
 		display: grid;
