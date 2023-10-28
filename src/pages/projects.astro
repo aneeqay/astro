@@ -1,1 +1,28 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import { getEntry, getEntries } from 'astro:content';
+
+// const allProjects= await getCollection('projects');
+
+// const project = await getEntry('projects', 'welcome');
+
+const allProjects = (await getCollection('projects', ({ data }) => {
+    return data.isDraft !== true;
+  })).sort(
+    (a, b) => b.data.title.valueOf() - a.data.title.valueOf()
+  );
+console.log(allProjects)
+// console.log(project)
+
+
+// const title = await getEntry(project.data.title)
+// const url = await getEntry(project.data.url)
+---
 <h1>Projects</h1>
+<ul>
+    {
+      allProjects.map((project) => <li>{project.data.title}</li>)
+    }
+<!-- <a href={project.url}>GitHub Repo</a> -->
+
+
